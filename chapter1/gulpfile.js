@@ -7,7 +7,7 @@ gulp.task('test', function() {
     src('./test.js').
     pipe(mocha()).
     on('error', function() {
-      console.log('Tests failed!');
+      console.log('Tests failed on gulp file!');
       error = true;
     }).
     on('end', function() {

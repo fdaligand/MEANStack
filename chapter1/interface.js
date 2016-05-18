@@ -15,7 +15,7 @@ exports.insert = function(db, doc, callback) {
 exports.byDirector = function(db, director, callback) {
   // TODO: implement
   var query = {"director":director};
-  db.collection("movies").find(query).sort({"title":1}).toArray(function(err,docs{
+  db.collection("movies").find(query).sort({"title":1}).toArray(function(err,docs){
 	callback(err,docs);
 });
 };
