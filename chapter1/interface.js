@@ -2,9 +2,12 @@
  *  Inserts "doc" into the collection "movies".
  */
 exports.insert = function(db, doc, callback) {
-  // TODO:  
-   callback(db.collection("movies").insertOne(doc));
-};
+  // TODO:
+  db.collection("movies").insert(doc, function(error,result) {
+  	callback(error);	
+  });
+  
+ };
 
 /*
  *  Finds all documents in the "movies" collection
